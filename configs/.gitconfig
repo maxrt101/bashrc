@@ -17,7 +17,7 @@
 	mt = mergetool
 	dt = difftool
 [color]
-  ui = auto
+	ui = auto
 [diff]
 	tool = vimdiff
 	noprefix = false
@@ -27,10 +27,10 @@
 [difftool "vimdiff"]
 	cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
 [difftool "meld"]
-  trustExitCode = true
-  cmd = open -W -a Meld --args \"$LOCAL\" \"$REMOTE\"
+	trustExitCode = true
+	cmd = open -W -a Meld --args \"$LOCAL\" \"$REMOTE\"
 [merge]
 	tool = vimdiff
 [mergetool "meld"]
-  trustExitCode = true
-  cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"
+	trustExitCode = true
+	cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"
