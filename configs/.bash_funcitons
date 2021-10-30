@@ -1,0 +1,16 @@
+function venv {
+  local name="venv"
+  if [ ! -z $1 ]; then
+    name=$1
+  fi
+  python3 -m venv .venv --prompt $name
+}
+
+function mark {
+  export $1=`pwd`;
+}
+
+function find-replace {
+  grep -rl "$1" | xargs sed -i "s/$2/$3/g"
+}
+

@@ -1,0 +1,36 @@
+[user]
+	name = Maksym Tkachuk
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	cp = cherry-pick
+	upush = push -u origin HEAD
+	l = log --graph --abbrev=10 --pretty=format:\"%C(auto)%C(yellow)%h%Creset %C(dim)%ad%Creset %s %C(dim)[%an]%Creset%C(auto)%d\" --date=format:\"%Y-%m-%d %H:%M\"
+	s = status --show-stash -s -b
+	c = clone
+	mt = mergetool
+	dt = difftool
+[color]
+  ui = auto
+[diff]
+	tool = vimdiff
+	noprefix = false
+[difftool]
+	prompt = false
+	trustexitcode = true
+[difftool "vimdiff"]
+	cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
+[difftool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = vimdiff
+[mergetool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"
