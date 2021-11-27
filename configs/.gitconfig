@@ -14,6 +14,7 @@
 	l = log --graph --abbrev=10 --pretty=format:\"%C(auto)%C(yellow)%h%Creset %C(dim)%ad%Creset %s %C(dim)[%an]%Creset%C(auto)%d\" --date=format:\"%Y-%m-%d %H:%M\"
 	s = status --show-stash -s -b
 	c = clone
+	d = diff
 	mt = mergetool
 	dt = difftool
 [color]
