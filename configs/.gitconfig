@@ -2,6 +2,7 @@
 	name = Maksym Tkachuk
 [core]
 	editor = vim
+	pager = less -X -F
 [alias]
 	co = checkout
 	br = branch
