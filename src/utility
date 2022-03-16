@@ -14,3 +14,11 @@ function find-replace {
   grep -rl "$1" | xargs sed -i "s/$2/$3/g"
 }
 
+function set-title {
+  echo -n -e "\033]0;$@\007"
+}
+
+function promt-yn-or-die {
+  read -p '$@(y/n): ' confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1 
+}
+

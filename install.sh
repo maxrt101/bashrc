@@ -2,24 +2,15 @@
 
 SELF="$0"
 
-COLOR_RED='\033[0;31m'
-COLOR_GREEN='\033[0;32m'
-COLOR_BLUE='\033[0;34'
-COLOR_YELLOW='\033[1;33'
-COLOR_CYAN='\033[0;36'
-COLOR_RESET='\033[0m'
+echo 'source $HOME/bashrc/etc/shstartup' >> ~/.profile
+echo 'source $HOME/bashrc/etc/vimrc' >> ~/.vimrc
+echo 'source $HOME/bashrc/etc/zshrc' >> ~/.zshrc
+echo -ne '[include]\n\tpath = $HOME/bashrc/etc/gitconfig' >> ~/.gitconfig
+[ -f "~/.bashrc"] && echo 'source $HOME/bashrc/etc/shstartup' >> ~/.bashrc
 
-echo -e '${COLOR_YELLOW}WARNING${COLOR_RESET}: The install will replace a bunch of configs (like .gitconfig & .vimrc)'
-read -p 'Do you want to proceed?(y/n): ' confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
-
-# Oh My Zsh
-if [ ! -d ~/.oh-my-zsh ]; then
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
+#echo -e '${COLOR_YELLOW}WARNING${COLOR_RESET}: The install will replace a bunch of configs (like .gitconfig & .vimrc)'
+#read -p 'Do you want to proceed?(y/n): ' confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
 # tmux tpm
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-
-cp configs/* ~/
+[ ! -f "~/.tmux/plugins/tpm" ] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
