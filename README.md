@@ -2,4 +2,4 @@
 Useful configs, aliases etc
 
 ## Installation
-Run `install.sh` script. The configs will be copied
+Run `install` script. The configs will be installed 

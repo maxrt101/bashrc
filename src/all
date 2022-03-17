@@ -1,0 +1,4 @@
+
+source $HOME/bashrc/src/utility
+source $HOME/bashrc/src/colors
+

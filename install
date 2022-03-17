@@ -1,0 +1,16 @@
+#!/bin/bash
+
+SELF="$0"
+
+echo '[+] Installing configs'
+echo 'source $HOME/bashrc/etc/shstartup' >> ~/.profile
+echo 'source $HOME/bashrc/etc/vimrc' >> ~/.vimrc
+echo 'source $HOME/bashrc/etc/zshrc' >> ~/.zshrc
+echo -ne '\n[include]\n\tpath = $HOME/bashrc/etc/gitconfig' >> ~/.gitconfig
+[ -f "~/.bashrc" ] && echo 'source $HOME/bashrc/etc/shstartup' >> ~/.bashrc
+
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+  echo '[+] Installing tpm'
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+

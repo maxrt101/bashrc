@@ -1,0 +1,8 @@
+
+COLOR_RED='\033[0;31m'                                                                                                     
+COLOR_GREEN='\033[0;32m'                                                                                                   
+COLOR_BLUE='\033[0;34'                                                                                                     
+COLOR_YELLOW='\033[1;33'                                                                                                   
+COLOR_CYAN='\033[0;36'                                                                                                     
+COLOR_RESET='\033[0m'
+
